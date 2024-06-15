@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Client</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+			background-color: rgb(34, 41, 61);
+			color: #fff;
+        }
+		.card{
+			background-color: rgb(53, 132, 228, 0.2);
+		}
+		
+		.card-body .table{
+			color: rgb(153, 193, 241);
+		}
+		
+		.card-body .tbody{
+			color: rgb(220, 138, 221);
+		}
+		
+        .container-custom {
+            width: 80%;
+            margin: auto;
+			background-color: rgb(98, 160, 234, 0.1);
+        }
+        .btn-right {
+            float: right;
+        }
+		
+		.btn-primary{
+			background-color: rgb(51, 209, 122, 0.2);
+		}
+    </style>
+</head>
+<body>
+    <div class="container container-custom mt-5">
+		<div class="card">
+			<h3 class="my-3">AlkeWallet Transactions</h3>
+		</div>
+		<div class="card-body">
+			<table class="table table-striped">
+	            <thead>
+	                <tr>
+	                    <th>ID</th>
+	                    <th>date</th>
+	                    <th>type</th>
+	                    <th>amount</th>
+						<th>source</th>
+						<th>target</th>
+	                </tr>
+	            </thead>
+	            <tbody class="tbody">
+	                <tr th:each="transaction : ${transactions}">
+	                    <td th:text="${transaction.id}"></td>
+						<td th:text="${transaction.formattedDate}"></td>
+	                    <td th:text="${transaction.type}"></td>
+						<td th:text="${transaction.amount}"></td>
+	                    <td th:text="${transaction.sourceAccount}"></td>
+						<td th:text="${transaction.targetAccount}"></td>
+	                </tr>
+	            </tbody>
+	        </table>
+	        </div>
+	        <div class="card-footer">
+					<a href="/accounts/new" class="btn btn-secondary mt-3">Create New Account</a>
+					<a href="/adminWallet" class="btn btn-secondary mt-3 btn-right">Back to Home</a>
+	        </div>
+    </div>
+</body>
+</html>

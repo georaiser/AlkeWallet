@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AlkeWallet</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            width: 50%;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 50px;
+        }
+		.btn{
+			background-color: rgb(68, 82, 114, 0.5);
+		}
+    </style>
+</head>
+<body>
+	  <h1>Welcome, <span th:text="${#authentication.principal.username}"></span>!</h1>	  
+	  <p>Your roles:</p>
+	  <ul>
+	      <li th:each="role : ${#authentication.principal.authorities}" th:text="${role}"></li>
+	  </ul>
+
+    <div class="container">
+        <h3 class="my-4">AlkeWallet Admin</h3>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <form th:action="@{/clients/new}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Create New Client</button>
+                </form>
+            </div>
+            <div class="col-md-6 mb-4">
+                <form th:action="@{/accounts/new}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Create New Account</button>
+                </form>
+            </div>
+			<div class="col-md-6 mb-4">
+                <form th:action="@{/clients/delete}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Delete Client</button>
+                </form>
+            </div>
+            <div class="col-md-6 mb-4">
+                <form th:action="@{/accounts/delete}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Delete Account</button>
+                </form>
+            </div>
+            <div class="col-md-6 mb-4">
+                <form th:action="@{/clients/all}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Display All Clients</button>
+                </form>
+            </div>
+            <div class="col-md-6 mb-4">
+                <form th:action="@{/accounts/all}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Display All Accounts</button>
+                </form>
+            </div>
+			<div class="col-md-6 mb-4">
+                 <form th:action="@{/transactions/selectClient}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Display Transactions by Client</button>
+                </form>
+            </div>
+            <div class="col-md-6 mb-4">
+                <form th:action="@{/transactions/all}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Display All Transactions</button>
+                </form>
+            </div>
+			<div class="col-md-6 mb-4">
+				<form th:action="@{/accounts/showAccount}" method="get">
+                    <button type="submit" class="btn btn-primary btn-block">Show Account /Operations</button>
+                </form>
+	        </div>
+			<div class="col-md-6 mb-4">
+	                <a href="/logout" class="btn btn-danger btn-block">Logout</a>
+	        </div>
+        </div>
+    </div>
+</body>
+</html>

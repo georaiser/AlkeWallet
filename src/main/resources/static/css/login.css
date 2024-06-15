@@ -1,0 +1,141 @@
+/* CSS for login page */
+body {
+    background-color: rgb(13, 19, 24);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+}
+
+.container{
+    max-width:500px;
+    width: 100%;
+	margin:0 auto;
+    position:relative;
+	background-size: cover;
+    border-radius: 2%;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);	
+	background-image:url(/img/card.jpg);
+}
+
+.card-header {
+    background-color: rgb(98, 160, 234, 0.2);
+    color: white;
+    border-bottom: none;
+    text-align: center;
+    padding: 10px;
+}
+
+.card{
+    background-color: rgb(98, 160, 234, 0.2);
+}
+
+.card-header img {
+    border-radius: 50%;
+}
+
+.card-body {
+    position: relative;
+    margin: 20px 30px;
+    padding: 5px;  
+}
+
+.card-footer {
+    background-color: rgb(69, 88, 92, 0.5);
+    color: white;
+    margin-top: 200px;
+    text-align: center;
+    padding: 5px;
+}
+
+.form-check-label {
+    display: inline-block;
+    color: #91a9b1;
+    font-weight: 600;
+    border-bottom:2px solid transparent;
+    margin:0 35px 2px 0;
+}
+
+.login-form .signin-form,
+.login-form .forgot-form {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.5s ease-in-out;
+    padding-top: 20px; 
+}
+
+.card-body .sign-in,
+.card-body .forgot-pwd{
+	display:none;
+}
+
+.card-body .sign-in:checked + .form-check-label,
+.card-body .forgot-pwd:checked + .form-check-label {
+	color:#bd73b9;
+	border-color:#742a74;
+    font-weight: 1000;
+}
+
+.login-form .signin-form {
+    transform: rotateY(0deg);
+}
+
+.login-form .forgot-form {
+    transform: rotateY(180deg);
+}
+
+.card-body .sign-in:checked + .form-check-label + .forgot-pwd + .form-check-label + .login-form .signin-form {
+    transform: rotateY(0deg);
+}
+
+.card-body .forgot-pwd:checked + .form-check-label + .login-form .forgot-form {
+    transform: rotateY(0deg);
+}
+
+.card-body .forgot-pwd:checked + .form-check-label + .login-form .signin-form {
+    transform: rotateY(-180deg);
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #569fa8;
+}
+
+.form-control {
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    border:none;
+	background:rgba(221, 103, 103, 0.1);
+}
+
+.btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-info {
+    background-color: rgb(95, 167, 95, 0.5);
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-info:hover {
+    background-color: rgb(95, 167, 95);
+}
+
+.btn-primary {
+    background-color: rgb(95, 167, 95, 0.5);
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: rgb(95, 167, 95);
+}
