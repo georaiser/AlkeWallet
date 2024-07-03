@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Account</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(34, 41, 61);
+            color: #fff;
+        }
+		.card{
+					background-color: rgb(198, 160, 234, 0.1);
+				}
+        .container-custom {
+            width: 80%;
+            margin: auto;
+			background-color: rgb(98, 160, 234, 0.1);
+        }
+        .btn-right {
+            float: right;
+        }	
+    </style>
+</head>
+<body>
+    <div class="container container-custom mt-5">
+		<div class="card">
+			<h1 class="my-3">New Account</h1>
+		</div>
+        <form th:action="@{/accounts/save}" th:object="${account}" method="post" onsubmit="operationDone()">
+			<div class="form-group">
+                <label for="accountNumber">Account Number:</label>
+				<input type="text" th:field="*{accountNumber}" class="form-control" id="accountNumber" name="accountNumber" readonly>
+            </div>
+						   		
+			<div class="form-group">
+			    <label for="accountType">Account Type:</label>
+			    <select th:field="*{accountType}">
+			        <option value="" th:text="'Select an account type'" th:selected="${accountType == null}"></option>
+			        <option th:each="type : ${accountTypes}" th:value="${type}" th:text="${type}" th:selected="${type == accountType}"></option>
+			    </select>
+			</div>
+
+			<div class="form-group">
+	            <label for="balance">Balance:</label>
+	            <input type="text" th:field="*{balance}" class="form-control" id="balance" name="balance" placeholder="Enter account Balance" required>
+	        </div>	
+			
+			<div class="form-group">
+                <label for="clientName">Client Name:</label>
+				<select id="clienteId" th:field="*{client}" class="form-control">
+					<option value="" th:text="'Select Client'" th:selected="${client == null}"></option>
+                    <option th:each="client : ${clients}" th:value="${client.id}" th:text="${client.name}"></option>
+                </select>
+            </div>
+			
+            <button type="submit" class="btn btn-primary">Create Account</button>
+        </form>
+        <a href="/adminWallet" class="btn btn-secondary mt-3 btn-right">Back to Home</a>
+    </div>
+	<script>
+        function operationDone() {
+            alert("Client created successfully!");
+        }
+    </script>
+</body>
+</html>
+

@@ -31,7 +31,7 @@
 		<div class="card">
 			<h1 class="my-3">New Account</h1>
 		</div>
-        <form th:action="@{/accounts/save}" th:object="${account}" method="post">
+        <form th:action="@{/accounts/save}" th:object="${account}" method="post" onsubmit="operationDone()">
 			<div class="form-group">
                 <label for="accountNumber">Account Number:</label>
 				<input type="text" th:field="*{accountNumber}" class="form-control" id="accountNumber" name="accountNumber" readonly>
@@ -62,6 +62,11 @@
         </form>
         <a href="/adminWallet" class="btn btn-secondary mt-3 btn-right">Back to Home</a>
     </div>
+	<script>
+        function operationDone() {
+            alert("Client created successfully!");
+        }
+    </script>
 </body>
 </html>
 
