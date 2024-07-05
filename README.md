@@ -14,7 +14,7 @@ AlkeWallet is a robust Spring Boot application that simulates a digital wallet s
 
 ## 🛠 Technology Stack
 
-- **Backend**: Java 11+, Spring Boot 2.x
+- **Backend**: Java 11+, Spring Boot 3.x
 - **Security**: Spring Security
 - **Database**: MySQL
 - **ORM**: Hibernate (Spring Data JPA)
@@ -55,17 +55,17 @@ com.alkewallet
 
 1. Clone the repository:
 
-*git clone https://github.com/yourusername/AlkeWallet.git
+- git clone https://github.com/yourusername/AlkeWallet.git
 
 2. Configure MySQL database in `src/main/resources/application.properties`:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/AlkeWallet
-spring.datasource.username=root
-spring.datasource.password=Admin2024
+- spring.datasource.url=jdbc:mysql://localhost:3306/AlkeWallet
+- spring.datasource.username=root
+- spring.datasource.password=Admin2024
 
 3. Build and run the application:
 
-./mvnw spring-boot:run
+- ./mvnw spring-boot:run
 
 4. Access the application at `http://localhost:8080`
 
