@@ -182,7 +182,7 @@ Contributions to AlkeWallet are welcome! Please follow these steps:
 
 ### Jorge Rodriguez
 
-email: [jrodriguez.geoai@gmail.com](jrodriguez.geoai@gmail.com)
+email: [jrodriguez.geoai@gmail.com][jrodriguez.geoai@gmail.com]
 
 linkedin: [https://www.linkedin.com/in/jrodrigueze/](https://www.linkedin.com/in/jrodrigueze/)
 
