@@ -182,11 +182,11 @@ Contributions to AlkeWallet are welcome! Please follow these steps:
 
 ### Jorge Rodriguez
 
-[jrodriguez.geoai@gmail.com](jrodriguez.geoai@gmail.com)
+email: [jrodriguez.geoai@gmail.com](jrodriguez.geoai@gmail.com)
 
-[https://www.linkedin.com/in/jrodrigueze/](https://www.linkedin.com/in/jrodrigueze/)
+linkedin: [https://www.linkedin.com/in/jrodrigueze/](https://www.linkedin.com/in/jrodrigueze/)
 
-Project Link: [https://github.com/georaiser/AlkeWallet](https://github.com/georaiser/AlkeWallet)
+project: [https://github.com/georaiser/AlkeWallet](https://github.com/georaiser/AlkeWallet)
 
 This comprehensive README provides a detailed overview of the AlkeWallet project, including its features, architecture, setup instructions, technical stack, key components, and various other aspects that would be valuable for users and contributors. It's formatted for clear readability on GitHub and includes emojis for visual appeal.
 
