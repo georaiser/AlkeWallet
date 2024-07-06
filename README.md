@@ -1,15 +1,30 @@
  # AlkeWallet
 
-AlkeWallet is a robust Spring Boot application that simulates a digital wallet system with advanced financial management capabilities. This project showcases the implementation of a secure, scalable, and feature-rich banking solution using modern Java technologies.
+AlkeWallet is a robust Spring Boot application that simulates a digital wallet system with advanced financial management capabilities. This project showcases the implementation of a secure, scalable, and feature-rich banking solution using modern Java technologies. It provides functionality for managing clients, accounts, and transactions in a secure environment.
+
 
 ## 🌟 Features
 
 - **User Authentication & Authorization**: Secure login system with role-based access control (ADMIN and USER roles).
+    - User authentication and authorization
+    - Role-based access control
 - **Account Management**: Create, view, and manage multiple account types (CHECKING, SAVING).
+    - Create new accounts
+    - View all accounts
+    - Delete accounts
+    - Show account details and operations
 - **Transaction Processing**: Support for deposits, withdrawals, and inter-account transfers.
+    - Deposit funds
+    - Withdraw funds
+    - Transfer funds between accounts
 - **Client Management**: CRUD operations for client information.
+    - Create new clients
+    - View all clients
+    - Delete clients
 - **Admin Dashboard**: Centralized management interface for system administrators.
 - **Transaction History**: Detailed logs of all financial transactions.
+    - View all transactions
+    - Display transactions by client
 - **Security**: Implements Spring Security with custom UserDetailsService and BCrypt password encoding.
 
 ## 🛠 Technology Stack
@@ -51,11 +66,38 @@ com.alkewallet
 4. **TransactionService**: Handles and logs all financial transactions.
 5. **DataInitializer**: Bootstraps the application with initial roles and users.
 
+## `🔑` Key Components HTML
+
+1. **Admin Dashboard** (`adminWallet.html`):
+   - Central hub for all administrative operations
+
+2. **Client Management**:
+   - Create new clients (`newClient.html`)
+   - View all clients (`allClients.html`)
+   - Delete clients (`deleteClient.html`)
+
+3. **Account Management**:
+   - Create new accounts (`newAccount.html`)
+   - View all accounts (`allAccounts.html`)
+   - Delete accounts (`deleteAccount.html`)
+   - Show account details (`showAccount.html`)
+
+4. **Transaction Operations**:
+   - Deposit (`deposit.html`)
+   - Withdrawal (`withdrawal.html`)
+   - Transfer (`transfer.html`)
+
+5. **Transaction Tracking**:
+   - View all transactions (`allTransactions.html`)
+   - Select client for transaction view (`selectClient.html`)
+   - View transactions by client (`transactionsByClient.html`)
+
+
 ## 🚀 Getting Started
 
 1. Clone the repository:
 
-- git clone https://github.com/yourusername/AlkeWallet.git
+- git clone https://github.com/georaiser/AlkeWallet.git
 
 2. Configure MySQL database in `src/main/resources/application.properties`:
 
@@ -134,13 +176,15 @@ Contributions to AlkeWallet are welcome! Please follow these steps:
 
 ## 📄 License
 
-[Add your license information here]
+[license information]
 
 ## 📞 Contact
 
-[Your Name] - [your.email@example.com]
+[Jorge Rodriguez]
+[jrodriguez.geoai@gmail.com]
+[https://www.linkedin.com/in/jrodrigueze/]
 
-Project Link: [https://github.com/yourusername/AlkeWallet](https://github.com/yourusername/AlkeWallet)
+Project Link: [https://github.com/georaiser/AlkeWallet](https://github.com/georaiser/AlkeWallet)
 
-This comprehensive README provides a detailed overview of the AlkeWallet project, including its features, architecture, setup instructions, and various other aspects that would be valuable for users and contributors. It's formatted for clear readability on GitHub and includes emojis for visual appeal. You can further customize this README to include any specific details or sections relevant to your project's unique aspects or requirements.
+This comprehensive README provides a detailed overview of the AlkeWallet project, including its features, architecture, setup instructions, technical stack, key components, and various other aspects that would be valuable for users and contributors. It's formatted for clear readability on GitHub and includes emojis for visual appeal.
 
