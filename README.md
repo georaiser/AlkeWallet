@@ -103,7 +103,7 @@ com.alkewallet
 
 - spring.datasource.url=jdbc:mysql://localhost:3306/AlkeWallet
 - spring.datasource.username=root
-- spring.datasource.password=Admin2024
+- spring.datasource.password=****
 
 3. Build and run the application:
 
