@@ -181,8 +181,10 @@ Contributions to AlkeWallet are welcome! Please follow these steps:
 ## 📞 Contact
 
 ### Jorge Rodriguez
-[jrodriguez.geoai@gmail.com][jrodriguez.geoai@gmail.com]
-[https://www.linkedin.com/in/jrodrigueze/][https://www.linkedin.com/in/jrodrigueze/]
+
+[jrodriguez.geoai@gmail.com](jrodriguez.geoai@gmail.com)
+
+[https://www.linkedin.com/in/jrodrigueze/](https://www.linkedin.com/in/jrodrigueze/)
 
 Project Link: [https://github.com/georaiser/AlkeWallet](https://github.com/georaiser/AlkeWallet)
 
